@@ -39,6 +39,13 @@ sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package
 # Add luci-app-openclash
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 
+# Add luci-app-v2raya
+svn co https://github.com/LOL-WRT/luci-app-v2raya/trunk package/luci-app-v2raya
+
+# Preinstalled v2rayA web GUI
+mkdir -p package/base-files/files/etc/v2raya
+svn co http://github.com/v2rayA/v2raya-web/trunk package/base-files/files/etc/v2raya/web
+
 # Add p7zip
 # svn co https://github.com/hubutui/p7zip-lede/trunk package/p7zip
 
