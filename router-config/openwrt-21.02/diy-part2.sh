@@ -41,7 +41,7 @@ wget $clash_main_url && tar zxvf clash-linux-*.tar.gz && rm -f clash-linux-*.gz
 chmod +x clash*
 
 # Add p7zip
-# svn co https://github.com/hubutui/p7zip-lede/trunk package/lean/p7zip
+svn co https://github.com/hubutui/p7zip-lede/trunk package/lean/p7zip
 
 # Add autocore
 # svn co https://github.com/ophub/amlogic-s9xxx-openwrt/trunk/amlogic-s9xxx/common-files/patches/autocore package/lean/autocore
