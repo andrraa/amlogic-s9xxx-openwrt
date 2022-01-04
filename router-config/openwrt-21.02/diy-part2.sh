@@ -29,6 +29,17 @@ echo "DISTRIB_SOURCECODE='openwrt'" >>package/base-files/files/etc/openwrt_relea
 # Add luci-app-amlogic
 # svn co https://github.com/ophub/luci-app-amlogic/trunk package/luci-app-amlogic
 
+# Add luci-app-openclash
+svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/openwrt-openclash
+pushd package/openwrt-openclash/tools/po2lmo && make && sudo make install 2>/dev/null && popd
+
+# Add openclash core
+mkdir -p files/etc/openclash/core
+cd files/etc/openclash/core
+clash_main_url=$(curl -sL https://api.github.com/repos/vernesong/OpenClash/releases/tags/Clash | grep /clash-linux-armv8 | sed 's/.*url\": \"//g' | sed 's/\"//g')
+wget $clash_main_url && tar zxvf clash-linux-*.tar.gz && rm -f clash-linux-*.gz
+chmod +x clash*
+
 # Add p7zip
 # svn co https://github.com/hubutui/p7zip-lede/trunk package/lean/p7zip
 
