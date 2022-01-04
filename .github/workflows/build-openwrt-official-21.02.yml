@@ -112,17 +112,14 @@ jobs:
       uses: ncipollo/release-action@v1
       if: steps.build.outputs.status == 'success' && !cancelled()
       with:
-        tag: openwrt_s9xxx_official_${{ env.PACKAGED_OUTPUTDATE }}
+        tag: openwrt_s905x_official_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          This is OpenWrt firmware for Amlogic s9xxx tv box
+          This is OpenWrt firmware for Amlogic s905x tv box
           * Firmware information
           Default IP: 192.168.1.1
           Default username: root
           Default password: password
-          Default WIFI name: OpenWrt
-          Default WIFI password: none
-          Install to EMMC: Login to OpenWrt → System → Amlogic Service → Install OpenWrt
 
