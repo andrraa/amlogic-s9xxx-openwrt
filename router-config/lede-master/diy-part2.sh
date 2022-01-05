@@ -42,7 +42,7 @@ pushd package/openwrt-openclash/tools/po2lmo && make && sudo make install 2>/dev
 mkdir -p package/base-files/files/etc/openclash/core/
 cd package/base-files/files/etc/openclash/core/
 clash_main_url=$(curl -sL https://api.github.com/repos/vernesong/OpenClash/releases/tags/Clash | grep /clash-linux-armv8 | sed 's/.*url\": \"//g' | sed 's/\"//g')
-wget $clash_main_url && tar zxvf clash-linux-*.tar.gz && rm -f clash-linux-*.gz
+wget $clash_main_url && tar zxvf clash-linux-*.tar.gz && cp clash clash_tun && rm -f clash-linux-*.gz
 chmod +x clash*
 
 # Add p7zip
