@@ -14,12 +14,12 @@ on:
     #- cron: '0 17 * * 0'
 
 env:
-  REPO_URL: https://gitlab.com/librerouter/librerouteros
+  REPO_URL: https://gitlab.com/andrraa/librerouteros
   REPO_BRANCH: librerouter-1.4
-  FEEDS_CONF: router-config/lede-master/feeds.conf.default
-  CONFIG_FILE: router-config/lede-master/.config
-  DIY_P1_SH: router-config/lede-master/diy-part1.sh
-  DIY_P2_SH: router-config/lede-master/diy-part2.sh
+  FEEDS_CONF: router-config/libremesh/feeds.conf.default
+  CONFIG_FILE: router-config/libremesh/.config
+  DIY_P1_SH: router-config/libremesh/diy-part1.sh
+  DIY_P2_SH: router-config/libremesh/diy-part2.sh
   TZ: Asia/Jakarta
 
 jobs:
